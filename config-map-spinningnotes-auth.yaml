@@ -1,0 +1,17 @@
+# app-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spinningnotes-auth
+  namespace: spinningnotes
+data:
+  application.yaml: |-
+    app:
+      config: Configuration from Kubernetes 2!
+      token:
+        secretkey: ${TOKEN_SECRETKEY}
+        issuer: Spinning Notes
+    spring:
+      data:
+        mongodb:
+          host: mongodb-service

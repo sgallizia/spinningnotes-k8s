@@ -11,5 +11,4 @@ spec:
     targetPort: 8080
   selector:
     app: spinningnotes-auth
-  sessionAffinity: None
-  type: NodePort
+  type: ClusterIP
